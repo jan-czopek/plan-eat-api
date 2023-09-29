@@ -83,3 +83,5 @@
 20230929	23:25:03	c73bd8ec-5002-44bd-8f59-90901bc24a47	GET	https://routing-bfqcibnfp-jan-czopeks-projects.vercel.app	/posts
 20230929	23:26:51	dbd73d94-6886-40b0-85aa-94892e49d9e2	OPTIONS	https://routing-bfqcibnfp-jan-czopeks-projects.vercel.app	/posts
 20230929	23:26:51	5c9ad138-35c0-4522-9e5c-633afa0d87a6	GET	https://routing-bfqcibnfp-jan-czopeks-projects.vercel.app	/posts
+20230929	23:39:39	afa35ada-de1f-4bf0-8ecf-baf71ac458b6	OPTIONS	https://plan-eat-client.onrender.com	/posts
+20230929	23:39:39	b22d74dc-4df9-4572-ba72-eea77f27b68e	GET	https://plan-eat-client.onrender.com	/posts
