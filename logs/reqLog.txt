@@ -100,3 +100,16 @@
 20230930	01:00:07	6555e6f3-1a02-4b6c-88ae-96fac78cdea3	GET	http://localhost:3000	/posts
 20230930	01:00:33	8601980a-6add-4fa1-bce3-52a3823509fc	GET	http://localhost:3000	/posts
 20230930	01:01:52	52b107f5-f4e7-475e-be14-bbbdb6fd1b92	GET	http://localhost:3000	/posts
+20231003	14:58:46	8b0474c9-8767-46cd-ac48-7fb1f641aefb	GET	null	/posts
+20231003	14:59:17	a2b639a3-6600-467d-b0ee-2f20774addb9	GET	http://localhost:3000	/posts
+20231003	14:59:17	733bc361-93b9-4408-8b14-5569fa9376da	GET	http://localhost:3000	/posts
+20231003	15:03:25	390c27ce-f5fe-494c-a547-b31c2a26efe8	GET	undefined	/posts
+20231003	15:03:25	2aeaa4e5-fd4e-4fdb-8cb8-8df46ae0fe97	GET	undefined	/favicon.ico
+20231003	15:04:16	51b52049-8da4-48bf-ab01-1857affbcee9	GET	undefined	/posts
+20231003	15:04:23	0d180739-eb8e-47cf-8fbf-a55543734bed	GET	http://localhost:3000	/posts
+20231003	15:43:29	9e2f2272-0dfb-4fa8-aba4-3dabc4d73aa5	OPTIONS	http://localhost:3000	/posts
+20231003	15:43:29	9b9e244e-bf1f-40ad-9956-ef73698ca742	POST	http://localhost:3000	/posts
+20231003	15:43:41	90f3df58-f00c-40ee-a0c3-cf22481d362a	GET	undefined	/posts
+20231003	15:52:32	0be6804c-1afa-4c63-bb9c-2b7fc0095db2	GET	http://localhost:3000	/posts
+20231003	15:53:22	27a5bddb-84d3-4c8b-8975-3c97691b2a14	OPTIONS	http://localhost:3000	/posts
+20231003	15:53:22	1c9ab9df-4e2b-40e6-91af-ca50fa0244f9	POST	http://localhost:3000	/posts

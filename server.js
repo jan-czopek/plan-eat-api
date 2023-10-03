@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -6,6 +7,7 @@ const corsOptions = require('./config/corsOptions');
 const { logger } = require('./midleware/logEvents');
 const errorHandler = require('./midleware/errorHandler');
 const PORT = process.env.PORT || 3500;
+const db = require('./model/db');
 
 app.use(logger);
 
@@ -34,4 +36,14 @@ app.all('*', (req, res) => {
 
 app.use(errorHandler);
 
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+const connect = async () => {
+  try {
+    await db.sync({ alter: true })
+    console.log("Connection has been established successfully.");
+    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+  } catch (error) {
+    console.error("Unable to connect to the database:", error)
+  }
+}
+
+connect();

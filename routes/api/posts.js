@@ -3,8 +3,8 @@ const router = express.Router();
 const postController = require('../../controllers/postController');
 
 router.route('/')
-  .get(postController.getAllPosts)
-  .post(postController.createNewPost)
+  .get(postController.getPosts)
+  .post(postController.createPost)
 
 router.route('/:id')
   .put(postController.updatePost)
