@@ -12,12 +12,12 @@ exports.getPosts = async (req, res) => {
 
 exports.getPost = async (req, res) => {
   try {
-    const { id } = parseInt(req.params);
+    const id = parseInt(req.params.id);
     console.log(id);
     const post = await Post.findOne({ where: { id: id } });
 
-    if (!method) return res.status(404).json({ message: 'Post does not exist' });
-    res.json(method);
+    if (!post) return res.status(404).json({ message: 'Post does not exist' });
+    res.json(post);
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }
@@ -26,14 +26,16 @@ exports.getPost = async (req, res) => {
 exports.createPost = async (req, res) => {
   const {
     title,
-    body
+    body,
+    userId
   } = req.body;
 
   console.log(req.body)
   try {
     const newPost = await Post.create({
       title: title || '',
-      body: body || ''
+      body: body || '',
+      userId: parseInt(userId)
     });
     console.log(newPost);
     res.json(newPost);
@@ -45,15 +47,17 @@ exports.createPost = async (req, res) => {
 
 exports.updatePost = async (req, res) => {
   try {
-    const { id } = parseInt(req.params);
     const {
+      id,
       title,
-      body
+      body,
+      userId
     } = req.body;
 
-    const post = await Post.findByPk(id);
+    const post = await Post.findByPk(parseInt(id));
     post.title = title;
     post.body = body;
+    post.userId = parseInt(userId);
     await post.save();
 
     res.json(post);
@@ -63,7 +67,7 @@ exports.updatePost = async (req, res) => {
 };
 
 exports.deletePost = async (req, res) => {
-  const { id } = parseInt(req.params);
+  const id = parseInt(req.params.id);
 
   try {
     await Post.destroy({
